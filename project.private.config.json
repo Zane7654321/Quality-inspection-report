@@ -3,5 +3,6 @@
   "projectname": "Quality-inspection-report",
   "setting": {
     "compileHotReLoad": true
-  }
+  },
+  "libVersion": "2.21.4"
 }

@@ -1,0 +1,39 @@
+<view class="container">
+  <!-- 产品合格判断 -->
+  <view class="section">
+    <text class="section-title">产品是否合格？</text>
+    <radio-group bindchange="onRadioChange">
+      <label class="radio-item">
+        <radio value="合格" checked="{{isQualified === '合格'}}" /> 合格
+      </label>
+      <label class="radio-item">
+        <radio value="不合格" checked="{{isQualified === '不合格'}}" /> 不合格
+      </label>
+    </radio-group>
+  </view>
+
+  <!-- 不合格问题详细描述 -->
+  <view class="section" wx:if="{{isQualified === '不合格'}}">
+    <text class="section-title">不合格问题描述</text>
+    <textarea
+      placeholder="请详细描述不合格问题"
+      bindinput="onInputDescription"
+      value="{{description}}"
+      class="textarea"
+    ></textarea>
+  </view>
+
+  <!-- 不合格产品图片上传 -->
+  <view class="section" wx:if="{{isQualified === '不合格'}}">
+    <text class="section-title">上传不合格产品图片</text>
+    <button bindtap="chooseImage" class="upload-button">选择图片</button>
+    <view class="image-list">
+      <block wx:for="{{images}}" wx:key="index">
+        <image src="{{item}}" mode="aspectFill" class="uploaded-image"></image>
+      </block>
+    </view>
+  </view>
+
+  <!-- 提交按钮 -->
+  <button bindtap="submitQuestionnaire" class="submit-button">提交问卷</button>
+</view>

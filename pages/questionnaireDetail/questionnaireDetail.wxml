@@ -1,0 +1,23 @@
+<view class="container">
+  <!-- 产品合格判断 -->
+  <view class="section">
+    <text class="section-title">产品是否合格？</text>
+    <text>{{isQualified}}</text>
+  </view>
+
+  <!-- 不合格问题详细描述 -->
+  <view class="section" wx:if="{{isQualified === '不合格'}}">
+    <text class="section-title">不合格问题描述</text>
+    <text>{{description}}</text>
+  </view>
+
+  <!-- 不合格产品图片 -->
+  <view class="section" wx:if="{{isQualified === '不合格'}}">
+    <text class="section-title">不合格产品图片</text>
+    <view class="image-list">
+      <block wx:for="{{images}}" wx:key="index">
+        <image src="{{item}}" mode="aspectFill" class="uploaded-image"></image>
+      </block>
+    </view>
+  </view>
+</view>

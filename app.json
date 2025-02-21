@@ -1,0 +1,9 @@
+{
+  "pages": [
+    "pages/fillQuestionnaire/fillQuestionnaire",
+    "pages/questionnaireDetail/questionnaireDetail"
+  ],
+  "window": {
+    "navigationBarTitleText": "产品合格问卷"
+  }
+}

@@ -3,5 +3,18 @@
   "projectname": "Quality-inspection-report",
   "setting": {
     "compileHotReLoad": true
+  },
+  "condition": {
+    "miniprogram": {
+      "list": [
+        {
+          "name": "pages/fillQuestionnaire/fillQuestionnaire",
+          "pathName": "pages/fillQuestionnaire/fillQuestionnaire",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        }
+      ]
+    }
   }
 }
